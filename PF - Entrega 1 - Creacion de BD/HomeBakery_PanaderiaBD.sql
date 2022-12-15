@@ -1,6 +1,6 @@
 /*Creación de la base de datos para la panadería Home Bakery*/
 CREATE DATABASE HOMEBAKERY;
-/**/
+/*Seleccionamos la base de datos creada*/
 USE HOMEBAKERY;
 /*Creación de las tablas*/
 #Tabla "Direccion"
