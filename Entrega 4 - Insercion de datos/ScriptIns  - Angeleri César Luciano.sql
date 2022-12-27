@@ -44,6 +44,7 @@ ALTER TABLE PRESENTACION CHANGE COLUMN ID_Presentacion
 	ID_Presentacion INT NOT NULL AUTO_INCREMENT;
 SET FOREIGN_KEY_CHECKS = 1;
 /*Inserción de datos*/
+TRUNCATE TABLE PRESENTACION;
 INSERT INTO PRESENTACION (Nombre_Presentacion,Cantidad_Presentacion,Unidad_Medida)
 VALUES
 ('Paquete de 25 kg',25,'kilogramos'),
@@ -73,3 +74,195 @@ INSERT INTO EMPLEADO (Nombre_Empleado,Telefono_Empleado,Sector_Empleado,ID_Direc
 VALUES
 ('Lisle Turpin', 03816611336, 'Producción', 1),
 ('Lauren Odger',03819773892, 'Ventas', 2);
+/*Tabla Recetas*/
+/*Se modifica la tabla Receta, se quitan los campos Categoria_Proceso, Cantidad_Material, Unidad_Medida e ID_Material para asignarlos a la tabla 
+RECETA_MATERIAL*/
+ALTER TABLE RECETA DROP FOREIGN KEY receta_ibfk_1; -- Se elimina la relacion de FK para luego eliminar las columnas
+ALTER TABLE RECETA
+	DROP COLUMN Categoria_Proceso,
+    DROP COLUMN Cantidad_Material,
+    DROP COLUMN Unidad_Medida,
+    DROP COLUMN ID_Material;
+/*Inserción de datos*/
+INSERT INTO RECETA (Nombre_Receta) 
+VALUES
+('Pan Integral con Semillas'),
+('Pan de Molde'),
+('Pan Lactal'),
+('Pan Hamburguesa'),
+('Pan Arabe'),
+('Pan Hamburguesa Lactal'),
+('Prepizza'),
+('Prepizza Integral'),
+('Baguette'),
+('Pan de Sandwich'),
+('Pan Hojaldrado');
+/*Tabla RECETA_MATERIAL*/
+/*Se añaden las columnas Categoria_Proceso,Cantidad_Material, Unidad_Medida*/
+ALTER TABLE RECETA_MATERIAL 
+ADD COLUMN( 
+	Categoria_Proceso VARCHAR(50) NOT NULL,
+	Cantidad_Material FLOAT NOT NULL,
+    Unidad_Medida VARCHAR(20) NOT NULL
+);
+ /*Tabla MATERIAL*/   
+ /*se añade el campo Marca_Material y se elimina el campo Costo_Material, ID_Presentacion e ID_Proveedor (con sus respectivas FK)*/
+ALTER TABLE MATERIAL ADD COLUMN Marca_Material VARCHAR(40);
+ALTER TABLE MATERIAL DROP COLUMN Costo_Material;
+ALTER TABLE MATERIAL DROP FOREIGN KEY material_ibfk_1; -- Se elimina la relacion de FK para luego eliminar las columnas
+ALTER TABLE MATERIAL DROP FOREIGN KEY material_ibfk_2; -- Se elimina la relacion de FK para luego eliminar las columnas
+ALTER TABLE MATERIAL 
+	DROP COLUMN ID_Presentacion,
+    DROP COLUMN ID_Proveedor;
+/*Inserción de datos*/
+INSERT INTO MATERIAL (Nombre_Material,Marca_Material,Categoria_Material) VALUES
+('Harina 000','	Cañuelas','	Ingrediente'),
+('Harina 0000','Cañuelas','	Ingrediente'),
+('Harina Integral','Pureza','Ingrediente'), 
+('Sal',NULL,'Ingrediente'),
+('Azucar','Ledesma','Ingrediente'),
+('Levadura',NULL,'Ingrediente'),
+('Manteca','Primer Premio','Ingrediente'),
+('Grasa',NULL,'Ingrediente'),
+('Huevo',NULL,'Ingrediente'),
+('Leche','Serenisima','Ingrediente'),
+('Mix de Semillas',NULL,'Ingrediente'),
+('Agua',NULL,'Ingrediente'),
+('Aceite','Cocinero','Ingrediente'),
+('Pure de Papa',NULL,'Ingrediente'),
+('Polenta',NULL,'Ingrediente'),
+('Avena',NULL,'Ingrediente'),
+('Chocolate','Alpino','Ingrediente'),
+('Cacao',NULL,'Ingrediente'),
+('Bolsa PP 40x25',NULL,'Insumo'),
+('Precinto',NULL,'Insumo');
+/*Tabla RECETA_MATERIAL*/
+/*Hacemos AUTO_INCREMENTAL el campo ID_Receta_Material*/
+ALTER TABLE RECETA_MATERIAL CHANGE COLUMN ID_Receta_Material
+	ID_Receta_Material INT NOT NULL AUTO_INCREMENT;
+INSERT INTO RECETA_MATERIAL (ID_Receta, ID_Material, Categoria_Proceso, Cantidad_Material, Unidad_Medida) VALUES
+(1,1,'Prefermento',94,'gramos'),
+(1,12,'Prefermento',94,'gramos'),
+(1,6,'Prefermento',2,'gramos'),
+(1,1,'Bloque',219,'gramos'),
+(1,3,'Bloque',94,'gramos'),
+(1,4,'Bloque',8,'gramos'),
+(1,5,'Bloque',41,'gramos'),
+(1,7,'Bloque',41,'gramos'),
+(1,11,'Activacion de Semillas',47,'gramos'),
+(1,12,'Activacion de Semillas',47,'gramos'),
+(1,5,'Terminación',10,'gramos'),
+(1,10,'Terminación',5,'gramos'),
+(1,11,'Terminación',30,'gramos'),
+(1,19,'Empaque',1,'unidad'),
+(1,20,'Empaque',1,'unidad'),
+(2,1,'Prefermento',137,'gramos'),
+(2,12,'Prefermento',137,'gramos'),
+(2,6,'Prefermento',1,'gramos'),
+(2,1,'Bloque',320,'gramos'),
+(2,4,'Bloque',9,'gramos'),
+(2,13,'Bloque',23,'gramos'),
+(2,12,'Bloque',147,'gramos'),
+(2,19,'Empaque',1,'unidad'),
+(2,20,'Empaque',1,'unidad'),
+(3,1,'Prefermento',147,'gramos'),
+(3,10,'Prefermento',127,'gramos'),
+(3,6,'Prefermento',5,'gramos'),
+(3,1,'Tang zhong',39,'gramos'),
+(3,12,'Tang zhong',196,'gramos'),
+(3,1,'Bloque',303,'gramos'),
+(3,4,'Bloque',10,'gramos'),
+(3,5,'Bloque',49,'gramos'),
+(3,7,'Bloque',49,'gramos'),
+(3,5,'Terminación',10,'gramos'),
+(3,10,'Terminación',5,'gramos'),
+(3,19,'Empaque',1,'unidad'),
+(3,20,'Empaque',1,'unidad'),
+(4,1,'Prefermento',106,'gramos'),
+(4,10,'Prefermento',101,'gramos'),
+(4,6,'Prefermento',5,'gramos'),
+(4,1,'Bloque',160,'gramos'),
+(4,14,'Bloque',80,'gramos'),
+(4,5,'Bloque',16,'gramos'),
+(4,4,'Bloque',5,'gramos'),
+(4,7,'Bloque',27,'gramos'),
+(4,5,'Terminación',10,'gramos'),
+(4,10,'Terminación',10,'gramos'),
+(4,15,'Terminación',10,'gramos'),
+(4,19,'Empaque',1,'unidad'),
+(4,20,'Empaque',1,'unidad'),
+(5,1,'Prefermento',84,'gramos'),
+(5,12,'Prefermento',84,'gramos'),
+(5,6,'Prefermento',1,'gramos'),
+(5,1,'Bloque',197,'gramos'),
+(5,4,'Bloque',6,'gramos'),
+(5,13,'Bloque',8,'gramos'),
+(5,12,'Bloque',99,'gramos'),
+(5,19,'Empaque',1,'unidad'),
+(5,20,'Empaque',1,'unidad');
+/*Tabla Presentacion_Material*/
+ALTER TABLE PRESENTACION_MATERIAL CHANGE COLUMN ID_Presentacion_Material
+	ID_Presentacion_Material INT NOT NULL AUTO_INCREMENT;
+INSERT INTO PRESENTACION_MATERIAL (ID_Presentacion, ID_Material) VALUES
+(1,1),
+(1,2),
+(2,1),
+(2,2),
+(2,3),
+(2,4),
+(13,5),
+(3,6),
+(5,6),
+(14,7),
+(4,7),
+(3,7),
+(2,8),
+(17,9),
+(20,10),
+(4,11),
+(18,12),
+(19,13),
+(2,14),
+(2,15),
+(16,16),
+(3,17),
+(15,18),
+(6,19),
+(7,20);
+/*Tabla Proveedor_Material*/
+ALTER TABLE PROVEEDOR_MATERIAL CHANGE COLUMN ID_Proveedor_Material
+	ID_Proveedor_Material INT NOT NULL AUTO_INCREMENT;
+INSERT INTO PROVEEDOR_MATERIAL (ID_Material,ID_Proveedor) VALUES
+(1,2),
+(2,2),
+(3,2),
+(4,2),
+(5,2),
+(6,2),
+(7,2),
+(8,2),
+(9,2),
+(10,2),
+(11,2),
+(12,2),
+(13,2),
+(14,2),
+(15,2),
+(16,2),
+(17,6),
+(18,6),
+(19,12),
+(20,12);
+/*Tabla Producto*/
+INSERT INTO PRODUCTO (Nombre_Producto,ID_Receta,ID_Presentacion,Precio_Producto) VALUES 
+('Pan Integral con Semillas',1,8,450),
+('Pan de Molde',2,8,350),
+('Pan Lactal',3,8,350),
+('Pan Hamburguesa',4,9,300),
+('Pan Arabe',5,9,250),
+('Pan Hamburguesa Lactal',6,9,300),
+('Prepizza',7,10,400),
+('Prepizza Integral',8,10,450),
+('Baguette',9,12,300),
+('Pan de Sandwich',10,9,200),
+('Pan Hojaldrado',11,11,400);

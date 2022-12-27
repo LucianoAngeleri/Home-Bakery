@@ -27,7 +27,7 @@ CREATE TABLE PROVEEDOR (
 	ID_Proveedor INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Nombre_Proveedor VARCHAR(50) NOT NULL,
     Categoria_Proveedor VARCHAR(50) NOT NULL,
-	Telefono_Proveedor INT,
+	Telefono_Proveedor INT, /*Modificar a BIGINT o a VARCHAR*/
     ID_Direccion INT,
     FOREIGN KEY (ID_Direccion)
     REFERENCES DIRECCION(ID_Direccion)
@@ -53,24 +53,24 @@ CREATE TABLE PRESENTACION (
 CREATE TABLE MATERIAL (
 	ID_Material INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Nombre_Material VARCHAR(50) NOT NULL,
-    Costo_Material FLOAT NOT NULL,
+    Costo_Material FLOAT NOT NULL, /*Eliminar Costo_Material y añadir Marca_Material*/
     Categoria_Material VARCHAR(50) NOT NULL,
     ID_Presentacion INT NOT NULL,
 	ID_Proveedor INT NOT NULL,
     FOREIGN KEY (ID_Presentacion)
-    REFERENCES PRESENTACION(ID_Presentacion),
+    REFERENCES PRESENTACION(ID_Presentacion), -- Elimnar esta relacion porque en la tabla PRESENTACION_MATERIAL ya estará presente
     FOREIGN KEY (ID_Proveedor)
-    REFERENCES PROVEEDOR(ID_Proveedor)
+    REFERENCES PROVEEDOR(ID_Proveedor) -- Elimnar esta relacion porque en la tabla PROVEEDOR_MATERIAL ya estará presente
 );
 #Tabla "Receta"
 CREATE TABLE RECETA (
 	ID_Receta INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Nombre_Receta VARCHAR(50) NOT NULL,
-    Cantidad_Material FLOAT NOT NULL,
-    Unidad_Medida VARCHAR(20) NOT NULL,
-    Categoria_Proceso VARCHAR(50) NOT NULL,
-    ID_Material INT NOT NULL,
-	FOREIGN KEY (ID_Material)
+    Cantidad_Material FLOAT NOT NULL, -- Se elimina la columna y pasa a la tabla RECETA_MATERIAL
+    Unidad_Medida VARCHAR(20) NOT NULL, -- Se elimina la columna y pasa a la tabla RECETA_MATERIAL
+    Categoria_Proceso VARCHAR(50) NOT NULL, -- Se elimina la columna y pasa a la tabla RECETA_MATERIAL
+    ID_Material INT NOT NULL, -- Se elimina la columna y pasa a la tabla RECETA_MATERIAL
+	FOREIGN KEY (ID_Material)  -- Se elimina la relación para poder eliminar las columnas anteriores
     REFERENCES MATERIAL(ID_Material)
 );
 #Tabla "Producto"
@@ -171,7 +171,7 @@ CREATE TABLE PROVEEDOR_MATERIAL (
 );
 #Tabla "Receta_Material"
 CREATE TABLE RECETA_MATERIAL (
-	ID_Receta_Material INT NOT NULL PRIMARY KEY,
+	ID_Receta_Material INT NOT NULL PRIMARY KEY, -- Hacer AUTO_INCREMENTAL
     ID_Receta INT NOT NULL,
 	ID_Material INT NOT NULL,
     FOREIGN KEY (ID_Receta)
