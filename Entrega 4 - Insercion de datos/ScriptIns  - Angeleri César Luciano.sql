@@ -59,7 +59,7 @@ VALUES
 ('Paquete de 3 un.',3,'unidades'),
 ('Paquete de 8 un.',8,'unidades'),
 ('Paquete 1 un.',1,'unidades'),
-('Paquete de 2 kg',	2,'kilogramos'),
+('Paquete de 2 kg',2,'kilogramos'),
 ('Paquete de 2,5 kg',2.5,'kilogramos'),
 ('Paquete de 300 gr	',300,'gramos'),
 ('Paquete de 400 gr',400,'gramos'),
@@ -140,7 +140,7 @@ INSERT INTO MATERIAL (Nombre_Material,Marca_Material,Categoria_Material) VALUES
 /*Hacemos AUTO_INCREMENTAL el campo ID_Receta_Material*/
 ALTER TABLE RECETA_MATERIAL CHANGE COLUMN ID_Receta_Material
 	ID_Receta_Material INT NOT NULL AUTO_INCREMENT;
-INSERT INTO RECETA_MATERIAL (ID_Receta, ID_Material, Categoria_Proceso, Cantidad_Material, Unidad_Medida) VALUES
+INSERT INTO RECETA_MATERIAL (ID_Receta, ID_Material, Categoria_Proceso, Cantidad_Material, Unidad_Medida) VALUES -- Revisar "Pan Arabe" y "Pan hamburguesa". Insertar valores individuales
 (1,1,'Prefermento',94,'gramos'),
 (1,12,'Prefermento',94,'gramos'),
 (1,6,'Prefermento',2,'gramos'),
