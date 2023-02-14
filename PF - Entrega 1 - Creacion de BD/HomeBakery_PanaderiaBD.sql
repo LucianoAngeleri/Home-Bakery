@@ -89,9 +89,9 @@ CREATE TABLE PRODUCTO (
 CREATE TABLE PEDIDO (
 	ID_Pedido INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Fecha_Pedido DATETIME NOT NULL,
-    Cantidad_Producto INT NOT NULL,
+    Cantidad_Producto INT NOT NULL, -- Eliminar ya que estará presente en Pedido_Producto
     Estado_Pedido VARCHAR(50),
-    ID_Producto INT NOT NULL,
+    ID_Producto INT NOT NULL,  -- Eliminar ya que estará presente en Pedido_Producto
     ID_Cliente INT NOT NULL,
     FOREIGN KEY (ID_Producto)
     REFERENCES PRODUCTO(ID_Producto),
@@ -133,7 +133,8 @@ CREATE TABLE VENTA (
 CREATE TABLE PEDIDO_PRODUCTO (
 	ID_Pedido_Producto INT NOT NULL PRIMARY KEY,
     ID_Pedido INT NOT NULL,
-	ID_Producto INT NOT NULL,
+	ID_Producto INT NOT NULL, 
+    /*Agregar el campo Cantidad_Producto*/
     FOREIGN KEY (ID_Pedido)
     REFERENCES PEDIDO(ID_Pedido),
     FOREIGN KEY (ID_Producto)

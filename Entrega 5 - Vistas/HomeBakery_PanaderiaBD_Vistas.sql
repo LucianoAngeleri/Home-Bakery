@@ -55,7 +55,7 @@ ON RECETA_MATERIAL.ID_Receta = RECETA.ID_Receta
 INNER JOIN MATERIAL
 ON RECETA_MATERIAL.ID_Material = MATERIAL.ID_Material
 WHERE RECETA.Nombre_Receta= "Pan Lactal";
-/*La vista muestra los ingredientes e insumos para elaborar la receta de "Pan integral con Semillas"*/
+/*La vista muestra los ingredientes e insumos para elaborar la receta de "Pan de Molde"*/
 /*Creamos la vista Ingredientes_Pan_de_Molde*/
 CREATE VIEW Ingredientes_Pan_de_Molde AS
 SELECT 
@@ -70,7 +70,7 @@ ON RECETA_MATERIAL.ID_Receta = RECETA.ID_Receta
 INNER JOIN MATERIAL
 ON RECETA_MATERIAL.ID_Material = MATERIAL.ID_Material
 WHERE RECETA.Nombre_Receta= "Pan de Molde";
-/*La vista muestra los ingredientes e insumos para elaborar la receta de "Pan Lactal"*/
+/*La vista muestra los ingredientes e insumos para elaborar la receta de "Pan de Hamburguesa"*/
 /*Creamos la vista Ingredientes_Pan_Hamburguesa*/
 CREATE VIEW Ingredientes_Pan_Hamburguesa AS
 SELECT 
@@ -85,6 +85,7 @@ ON RECETA_MATERIAL.ID_Receta = RECETA.ID_Receta
 INNER JOIN MATERIAL
 ON RECETA_MATERIAL.ID_Material = MATERIAL.ID_Material
 WHERE RECETA.Nombre_Receta= "Pan Hamburguesa";
+/*La vista muestra los ingredientes e insumos para elaborar la receta de "Pan Arabe"*/
 /*Creamos la vista Ingredientes_Pan_Arabe*/
 CREATE VIEW Ingredientes_Pan_Arabe AS
 SELECT 
