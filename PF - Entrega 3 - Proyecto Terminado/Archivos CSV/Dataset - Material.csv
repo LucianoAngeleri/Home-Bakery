@@ -1,0 +1,21 @@
+ID_Material,Nombre_Material,Marca_Material,Categoria_Material
+1,Harina 000,Cañuelas,Ingrediente
+2,Harina 0000,Cañuelas,Ingrediente
+3,Harina Integral,Pureza,Ingrediente
+4,Sal,,Ingrediente
+5,Azucar,Ledesma,Ingrediente
+6,Levadura,,Ingrediente
+7,Manteca, Primer Premio,Ingrediente
+8,Grasa,,Ingrediente
+9,Huevo,,Ingrediente
+10,Leche,Serenisima,Ingrediente
+11,Mix de Semillas,,Ingrediente
+12,Agua,,Ingrediente
+13,Aceite,Cocinero,Ingrediente
+14,Pure de Papa,,Ingrediente
+15,Polenta,,Ingrediente
+16,Avena,,Ingrediente
+17,Chocolate,Alpino,Ingrediente
+18,Cacao,,Ingrediente
+19,Bolsa PP 40x25,,Insumo
+20,Precinto,,Insumo

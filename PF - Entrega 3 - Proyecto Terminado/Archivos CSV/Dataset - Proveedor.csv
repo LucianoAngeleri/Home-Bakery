@@ -1,0 +1,13 @@
+ID_Proveedor,Nombre_Proveedor,Categoria_Proveedor,Telefono_Proveedor,ID_Direccion
+1,Gomez Pardo - Sucursal Tafi Viejo,Supermercado,03814610300,3
+2,Gomez Pardo - Sucursal Yerba Buena,Supermercado,03814383000,4
+3,Gomez Pardo - Sucursal Brigido Teran,Supermercado,03814200558,5
+4,Gomez Pardo - Sucursal Chacabuco,Supermercado,03814245525,6
+5,Harituc - Sucursal Pellegrini,Distribuidor,03814230564,7
+6,Harituc - Sucursal Ejercito,Distribuidor,03812605849,8
+7,Harituc - Sucursal Coronel Suarez,Distribuidor,03814300821,9
+8,Harituc - Sucursal Francisco de Aguirre,Distribuidor,03814270565,10
+9,Harituc - Sucursal Jujuy,Distribuidor,03814297992,11
+10,Semilleria Altieri - Sucursal Cordoba,Semilleria,03814305826,12
+11,Semilleria Altieri - Sucursal Junín,Semilleria,03814211258,13
+12,Polituc,Distribuidor de Envases,03814321894,14

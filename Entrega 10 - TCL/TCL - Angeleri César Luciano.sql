@@ -28,23 +28,23 @@ Agregamos la sentencia de eliminación del savepoint de los primeros 4 registros
 */
 /*Tabla COMPRA*/
 START TRANSACTION;
-INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Material,ID_Empleado)
+INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Empleado)
 VALUES("2023-01-25", "Efectivo", 177.61,"Ingrediente",2,3,1);
-INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Material,ID_Empleado)
+INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Empleado)
 VALUES("2023-01-25", "Efectivo", 63.10, "Ingrediente",2,6,1);
-INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Material,ID_Empleado)
+INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Empleado)
 VALUES("2023-01-25", "Efectivo", 2835, "Ingrediente",2,7,1);
-INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Material,ID_Empleado)
+INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Empleado)
 VALUES("2023-01-25", "Efectivo", 2650, "Ingrediente",6,1,1);
 SAVEPOINT Ins_Lote_Compra_1;
 
-INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Material,ID_Empleado)
+INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Empleado)
 VALUES("2023-01-25", "Efectivo", 860, "Insumo",12,19,1);
-INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Material,ID_Empleado)
+INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Empleado)
 VALUES("2023-01-25", "Efectivo", 434.30, "Insumo",12,20,1);
-INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Material,ID_Empleado)
+INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Empleado)
 VALUES("2023-01-25", "Efectivo", 800, "Ingrediente",2,11,1);
-INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Material,ID_Empleado)
+INSERT INTO COMPRA (Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Empleado)
 VALUES("2023-01-25", "Efectivo", 743, "Ingrediente",2,11,1);
 SAVEPOINT Ins_Lote_Compra_2;
 

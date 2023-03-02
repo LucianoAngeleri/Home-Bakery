@@ -1,0 +1,51 @@
+ID_Compra,Fecha_Compra,Medio_Pago,Valor_Compra,Categoria_Compra,ID_Proveedor,ID_Empleado
+1,5/6/2022,Efectivo,844.32,Utensilios,5,2
+2,3/10/2022,Transferencia bancaria,3182.89,Materiales de empaque,4,2
+3,9/6/2022,Transferencia bancaria,357.54,Insumos,1,2
+4,4/29/2022,Tarjeta de crédito/débito,3786.12,Utensilios,1,1
+5,7/13/2022,Tarjeta de crédito/débito,3804.75,Insumos,9,2
+6,6/10/2022,Tarjeta de crédito/débito,6267.52,Utensilios,11,2
+7,10/28/2022,Tarjeta de crédito/débito,3.02,Insumos,2,1
+8,3/19/2022,Tarjeta de crédito/débito,5876.83,Ingredientes,5,1
+9,4/14/2022,Tarjeta de crédito/débito,7688.02,Insumos,2,2
+10,9/1/2022,Tarjeta de crédito/débito,8866.96,Materiales de empaque,12,2
+11,6/20/2022,Efectivo,4925.82,Materiales de empaque,11,1
+12,1/27/2023,Transferencia bancaria,5035.46,Ingredientes,6,1
+13,5/29/2022,Efectivo,5756.02,Ingredientes,8,1
+14,8/11/2022,Efectivo,7909.59,Insumos,2,1
+15,6/19/2022,Transferencia bancaria,278.67,Ingredientes,5,2
+16,4/6/2022,Tarjeta de crédito/débito,908.37,Ingredientes,9,1
+17,9/9/2022,Efectivo,7472.1,Utensilios,3,2
+18,11/27/2022,Tarjeta de crédito/débito,9592.75,Ingredientes,10,2
+19,9/16/2022,Tarjeta de crédito/débito,5247.12,Utensilios,9,2
+20,10/18/2022,Tarjeta de crédito/débito,3317.38,Materiales de empaque,9,1
+21,1/17/2023,Tarjeta de crédito/débito,212.46,Insumos,10,1
+22,3/16/2022,Efectivo,9220.47,Ingredientes,11,1
+23,1/19/2023,Transferencia bancaria,2747.54,Ingredientes,2,1
+24,5/20/2022,Transferencia bancaria,1295.77,Ingredientes,7,2
+25,1/5/2023,Tarjeta de crédito/débito,5446.5,Ingredientes,10,2
+26,4/29/2022,Tarjeta de crédito/débito,9074.82,Ingredientes,9,2
+27,11/17/2022,Efectivo,3701.2,Materiales de empaque,9,1
+28,5/13/2022,Transferencia bancaria,7601.07,Materiales de empaque,1,1
+29,4/17/2022,Efectivo,9829.93,Insumos,7,2
+30,4/4/2022,Efectivo,8966.83,Materiales de empaque,10,2
+31,7/7/2022,Tarjeta de crédito/débito,9732.18,Utensilios,1,2
+32,8/8/2022,Transferencia bancaria,8834.33,Insumos,7,2
+33,1/7/2023,Efectivo,7125.17,Utensilios,1,1
+34,3/26/2022,Tarjeta de crédito/débito,2034.71,Utensilios,9,2
+35,3/23/2022,Tarjeta de crédito/débito,5339.61,Ingredientes,3,2
+36,1/9/2023,Transferencia bancaria,2389.28,Utensilios,3,2
+37,9/14/2022,Transferencia bancaria,9074.76,Materiales de empaque,6,2
+38,12/24/2022,Transferencia bancaria,4451.49,Utensilios,11,1
+39,3/11/2022,Efectivo,8381.53,Insumos,10,1
+40,8/16/2022,Transferencia bancaria,84.23,Materiales de empaque,7,2
+41,1/21/2023,Transferencia bancaria,5536.89,Materiales de empaque,3,2
+42,4/16/2022,Transferencia bancaria,18.26,Ingredientes,6,2
+43,8/17/2022,Efectivo,6051.35,Ingredientes,12,1
+44,8/4/2022,Transferencia bancaria,5511.86,Ingredientes,8,2
+45,5/21/2022,Efectivo,8971.78,Insumos,5,1
+46,10/28/2022,Efectivo,3954.42,Insumos,10,2
+47,3/7/2022,Tarjeta de crédito/débito,778.34,Materiales de empaque,12,1
+48,7/15/2022,Efectivo,6931.46,Materiales de empaque,8,2
+49,1/19/2023,Transferencia bancaria,4389.43,Insumos,12,2
+50,8/24/2022,Transferencia bancaria,1111.26,Ingredientes,12,1
